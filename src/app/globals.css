@@ -2,20 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-image:url("../ui/assets/background.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-size: cover;
 }
+
+/* @media only screen and (max-width: 1100px){
+  body{
+    background-size: auto;
+  }
+  
+} */
+
+@media only screen and (max-width: 700px) {
+  body { 
+    animation: slidein 5s;
+    background-image:url("../ui/assets/desbravador-transparente-white.png");
+    background-size: auto;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {background-position: -100px 0px;}
+  to {background-position: top;  }
+}
+
+@keyframes slidein {
+  from {background-position: -100px 0px;}
+  to {background-position: top;  }
+
+}
+  
+
+
